@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #acdef6;
+    --secondary-color: #00aeff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: #eee;
+    padding: 50px;
+    border-radius: 7px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+}
+
+
+.container .input-container {
+    display: flex;
+    background: var(--main-color);
+    width: 95%;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+}
+
+#enterTitle {
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    font-size: 13px;
+    color: #ff0000;
+    display: none;
+}
+
+.container .input-container input,
+.container .search input {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-right: none;   
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+    transition: 0.3s;
+    margin-bottom: 3px;
+}
+
+.container .search {
+    width: 95%;
+}
+
+.container .search input {
+    border: 1px solid var(--main-color);
+    width: 100%;
+    margin: 0;
+}
+
+.container .input-container input:hover,
+.container .input-container input:focus,
+.container .search input:hover,
+.container .search input:focus {
+    padding-left: 27px;
+}
+
+.container .input-container button {
+    width: 20%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}   
+
+.container .to-do-list {
+    background: var(--main-color);
+    width: 95%;
+    padding: 20px;
+    border-radius: 3px;
+    
+}
+
+.container .to-do-list ul {
+    list-style: none;
+}
+
+.container .to-do-list ul li div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
+    border-radius: 3px;
+    gap: 10px;
+    position: relative;
+    margin: 20px;
+}
+
+.container .to-do-list ul li div h2 {
+    word-wrap: break-word;
+    width: 70%;
+}
+
+.container .to-do-list ul li div button {
+    background: transparent;
+    color: #ff0000;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.container .to-do-list ul li div.finished{
+    color:#00aeff;
+}
+
+
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 80%;
+    }
+}
+
